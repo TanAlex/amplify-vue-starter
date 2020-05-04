@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/ddb",
+            "lambdaFunction": "ddb",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "ddbapi",
+    "apiName": "ddbapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "ddb"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-vueauth-dev-175204-authRole",
+        "unAuthRoleName": "amplify-vueauth-dev-175204-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "ddb",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
